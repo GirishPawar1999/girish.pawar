@@ -10,8 +10,8 @@
 
         // Predefined responses
         const responses = {
-            "hello": `Hi, I’m Girish — developer, designer, and problem solver. Let me know how I can help!
-        Type "About me" to know more about me, "Skills" for my abilities, "Projects" to explore my work, "Resume" to get my CV, "Certifications" for my licenses, and "Reviews" to see feedback from others.`,
+            "hello": `Hi, I’m Girish — developer, designer, and problem solver. Let me know how I can help!\n
+        Type "About me" to know more about me \nType "Skills" for my abilities \nType "Projects" to explore my work \nType "Resume" to get my CV \nType "Certifications" for my licenses \nType "Reviews" to see feedback from others.`,
 
             "hi": `Hi, I’m Girish — developer, designer, and problem solver. Let me know how I can help!
         Type "About me" to know more about me, "Skills" for my abilities, "Projects" to explore my work, "Resume" to get my CV, "Certifications" for my licenses, and "Reviews" to see feedback from others.`,
@@ -327,4 +327,18 @@ function addMessage(content, sender) {
             });
         });
 
-        
+        document.addEventListener("DOMContentLoaded", function () {
+    // Existing sidebar toggle code here...
+
+    // Auto-send "hello" message after 2 seconds
+    setTimeout(() => {
+        const autoMessage = "hello";
+        addMessage(autoMessage, 'user');
+        showTyping();
+        setTimeout(() => {
+            hideTyping();
+            const response = getResponse(autoMessage);
+            addMessage(response, 'assistant');
+        }, 1000 + Math.random() * 1000);
+    }, 2000);
+});
