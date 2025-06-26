@@ -48,10 +48,35 @@ Edit
 - 📬 Contact form with **EmailJS integration**  
 - 🎞️ Animated visuals using **Lottie** or **GIFs**  
 - 🔄 Theme toggling support (Light/Dark)  
-- 📱 Fully responsive design  
+- 📱 Fully responsive design
+- 📄 Visitors Count
 
 ---
+## 📌 How to add visitors count
+- Create a google sheet name it as "Visitor's count"
+- A0 Cell Type Counts, A1 cell Type 0
+- Go to Extensions->App Script
+- Paste the following code
+  "function doGet(e) {
+  const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Sheet1");
+  const countCell = sheet.getRange("A2");
+  let count = countCell.getValue();
 
+  // Increment count by 1
+  count++;
+
+  // Save the new count
+  countCell.setValue(count);
+
+  // Prepare JSON response
+  const output = ContentService.createTextOutput(JSON.stringify({ count: count }));
+  output.setMimeType(ContentService.MimeType.JSON);
+  return output;
+
+}"
+-Go to Deploy-> New Deployment -> Make the Access to ANYONE
+- Replace the Webapp URL with yours
+- And You have Visitors Count :)
 ## 🛠️ Tech Stack
 
 - **HTML5 / CSS3 / JavaScript**  
@@ -79,6 +104,8 @@ Add blog/articles section
 Integrate backend for advanced contact analytics
 
 Live chat or AI chatbot integration
+
+Unique Visitors count
 
 📫 Let's Connect!
 💼 LinkedIn
