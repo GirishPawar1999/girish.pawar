@@ -13,6 +13,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
 
     <script src="script.js" defer></script>
+
+
+    <script>
+        fetch("https://script.google.com/macros/s/AKfycbwrx_kWwmOkq45ctGSNKriYm5B2rt5CJ5uOyTXf9SYagiYll6KXUbK3SgNwl81wIenm/exec")
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("visit-count").innerText = data.count;
+            })
+            .catch(() => {
+                document.getElementById("visit-count").innerText = "Unavailable";
+            });
+    </script>
     
 </head>
 
@@ -84,8 +96,12 @@
                     <span class="material-symbols-rounded">menu</span>
                 </button>
                 GIRISH PAWAR
+                
             </div>
             <div class="header-controls">
+                <div style="text-align: center;">
+                    <a class="Visitor" download target="_blank">Total Visits: <span id="visit-count">Loading...</span></a>
+                </div>
                 <button class="header-btn" id="theme-toggle">
                     <span class="material-symbols-rounded">light_mode</span>
                 </button>
@@ -120,6 +136,8 @@
                             <div style="text-align: center;">
                                 <a href="asset/resume.pdf" class="view-all-button" download target="_blank">Download Resume</a>
                             </div>
+                            
+
                         </div>
 
                     </div>
