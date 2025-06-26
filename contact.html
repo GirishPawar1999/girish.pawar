@@ -10,8 +10,19 @@
     <!-- Google Fonts Link For Icons -->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <script src="script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+
     
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "B1KkJyPTBhYPlxcKu",
+            });
+        })();
+    </script>
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -25,10 +36,10 @@
         </div>
 
         <div class="sidebar-section">
-            <div class="sidebar-item active">
+            <div class="sidebar-item">
                 <a href="index.html" class="sidebar-item">
                     <span class="material-symbols-rounded">search</span>
-                        Home
+                    Home
                 </a>
             </div>
         </div>
@@ -40,27 +51,29 @@
         </div>
 
         <div class="sidebar-section">
-            <a href="#projects" class="sidebar-item">
+            <div class="sidebar-item">
                 <span class="material-symbols-rounded">apps</span>
                 Projects
-            </a>
+            </div>
         </div>
 
-        <div class="sidebar-section">
-            <a href="aboutme.html" class="sidebar-item">
-                <span class="material-symbols-rounded">smart_toy</span>
-                About Me
-            </a>
-        </div>
 
         <div class="sidebar-section">
             
-            <a href="contact.html" class="sidebar-item">
-                    <span class="material-symbols-rounded">upgrade</span>
-                    Contact Me
-            </a>
+                <a href="aboutme.html" class="sidebar-item">
+                    <span class="material-symbols-rounded">smart_toy</span>
+                About Me
+                </a>
+            
         </div>
-
+        <div class="sidebar-section">
+            <div class="sidebar-item active">
+            <a href="contact.html" class="sidebar-item">
+                <span class="material-symbols-rounded">upgrade</span>
+                Contact Me
+            </a>
+            </div>
+        </div>
         <div class="sidebar-section">
             <div class="sidebar-item">
                 <p>
@@ -68,9 +81,10 @@
                         © 2025 Girish Kashinath Pawar. All rights reserved.
                     </center>
                 </p>
-        
+
             </div>
         </div>
+
     </div>
 
     <!-- Main Chat Area -->
@@ -91,35 +105,78 @@
                 </button>
             </div>
         </div>
+    
+    <div class="chat-container contact-container">
+        <div class="contact-wrapper">
+            <!-- Left: Contact Form -->
+            <form class="contact-form" onsubmit="event.preventDefault(); sendMail();">
 
-        <div class="chat-container" id="chat-container">
-            <div class="default-view" id="default-view">
-                <h1>What's on your mind today?</h1>
-                <p>Start a conversation and know more about me.<br>Initiate the conversation with Hello.</p>
+                <h2>Let's get in touch</h2>
 
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Name" required>
+
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Write your message here..." rows="5" required></textarea>
+
+                <button type="submit" class="send-btn2">
+                    <span class="material-symbols-rounded">send</span> Send Message
+                </button>
+            </form>
+
+            <!-- Right: Image -->
+            <div class="contact-image">
+                <img src="asset/Images/contactus.gif" alt="Contact Illustration">
             </div>
         </div>
+    </div>
+    <script>
+        
+    function sendMail() {
+        const form = document.querySelector(".contact-form");
+        let parms = {
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            message: document.getElementById("message").value,
+        };
 
+        emailjs.send("service_2pfueyc", "template_y17yc9e", parms)
+            .then(function (response) {
+                alert("✅ Email Sent Successfully!");
+                form.reset(); // ✅ Clear all form fields
+            }, function (error) {
+                alert("❌ FAILED TO SEND EMAIL: " + JSON.stringify(error));
+                console.error("EmailJS Error:", error);
+            });
+    }
+
+    </script>
+
+        
+    
         <div class="input-container">
             <div class="input-wrapper">
                 <!-- In the input-wrapper div -->
                 <textarea id="chat-input" class="input-box" placeholder="Ask anything" rows="1" required></textarea>
-
+    
                 <!-- File upload button -->
                 <input type="file" id="file-input" accept="image/*,.pdf" style="display:none" />
-
+    
                 <button type="button" id="upload-btn" class="control-btn" title="Upload Image or PDF">
                     <span class="material-symbols-rounded">attach_file</span>
                 </button>
-
+    
                 <button class="send-btn" id="send-btn" disabled>
                     <span class="material-symbols-rounded">send</span>
                 </button>
-
+    
             </div>
         </div>
     </div>
-
+    
 </body>
 
 </html>

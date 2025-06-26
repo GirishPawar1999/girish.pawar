@@ -11,7 +11,8 @@ let isTyping = false;
 // Predefined responses
 const responses = {
   hello: `Hi, I’m Girish — developer, designer, and problem solver. Let me know how I can help!\n
-        Type "About me" to know more about me \nType "Skills" for my abilities \nType "Projects" to explore my work \nType "Resume" to get my CV \nType "Certifications" for my licenses \nType "Reviews" to see feedback from others.`,
+        Type "About me" to know more about me \nType "Skills" for my abilities \nType "Projects" to explore my work \nType "Resume" to get my CV \nType "Certifications" for my licenses \nType "Reviews" to see feedback from others.\n 
+        NOTE: You can also access above details from the menu-> about me, if you want to skip chat.`,
 
   hi: `Hi, I’m Girish — developer, designer, and problem solver. Let me know how I can help!
         Type "About me" to know more about me, "Skills" for my abilities, "Projects" to explore my work, "Resume" to get my CV, "Certifications" for my licenses, and "Reviews" to see feedback from others.`,
