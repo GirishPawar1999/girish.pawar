@@ -75,7 +75,7 @@ function doGet(e) {
   return output;
 }
 ```
--Go to Deploy-> New Deployment -> Make the Access to ANYONE
+- Go to Deploy-> New Deployment -> Make the Access to ANYONE
 - Replace the Webapp URL with yours
 - And You have Visitors Count :)
 ## 🛠️ Tech Stack
