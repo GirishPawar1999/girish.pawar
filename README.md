@@ -57,7 +57,8 @@ Edit
 - A0 Cell Type Counts, A1 cell Type 0
 - Go to Extensions->App Script
 - Paste the following code
-  "function doGet(e) {
+```javascript
+function doGet(e) {
   const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Sheet1");
   const countCell = sheet.getRange("A2");
   let count = countCell.getValue();
@@ -72,8 +73,7 @@ Edit
   const output = ContentService.createTextOutput(JSON.stringify({ count: count }));
   output.setMimeType(ContentService.MimeType.JSON);
   return output;
-
-}"
+}
 -Go to Deploy-> New Deployment -> Make the Access to ANYONE
 - Replace the Webapp URL with yours
 - And You have Visitors Count :)
