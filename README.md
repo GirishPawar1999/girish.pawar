@@ -66,6 +66,7 @@ Edit
 1. Clone this repository:
 
 ```bash
+Note: Ask for permission before, you copy the file :)
 git clone https://github.com/girishpawar1999/girish.pawar.git
 cd girish.pawar
 Open index.html in your browser (no backend setup needed).
