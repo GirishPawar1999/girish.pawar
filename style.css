@@ -823,7 +823,7 @@ body.light-mode .tag {
   padding-left: 9px; /* adjust for left border */
 }
 
-  .view-all-button {
+.view-all-button {
     display: inline-block;
     background: #007bff;
     color: white;
@@ -836,10 +836,26 @@ body.light-mode .tag {
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
   }
 
-  .view-all-button:hover {
+.view-all-button:hover {
     background-color: #0056b3;
     box-shadow: 0 6px 14px rgba(0,86,179,0.5);
   }
+.download-icon {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+
+@media (max-width: 600px) {
+  .view-all-button {
+    padding: 10px 18px;
+  }
+
+  .download-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
 .Visitor {
     display: inline-block;
     background: #007bff;
@@ -980,6 +996,49 @@ body.light-mode .alt-section-light {
   line-height: 1.5;
   color: var(--text-secondary);
 }
+@media (max-width: 768px) {
+  .timeline::after {
+    left: 8px;
+  }
+
+  .timeline-entry {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 25px;
+    margin-bottom: 30px;
+  }
+
+  .timeline-entry.left,
+  .timeline-entry.right {
+    left: 0;
+  }
+
+  .timeline-entry::before {
+    left: 20px;
+    right: auto;
+  }
+
+  .timeline-entry.left::before,
+  .timeline-entry.right::before {
+    left: 35px;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent var(--bg-tertiary) transparent transparent;
+  }
+
+  .timeline-entry::after {
+    left: 0px;
+    right: auto;
+  }
+
+  .timeline-entry.right::after {
+    left: 0px;
+  }
+
+  .timeline-content {
+    margin-left: 0px;
+  }
+}
+
 /* Contact ME */
 .contact-container {
   padding: 40px 20px;
@@ -1103,33 +1162,6 @@ body.light-mode .alt-section-light {
   vertical-align: middle;
 }
 
-/* Mobile Responsive */
-@media screen and (max-width: 768px) {
-  .timeline::after {
-    left: 32px;
-  }
 
-  .timeline-entry {
-    width: 100%;
-    padding-left: 70px;
-    padding-right: 25px;
-  }
-
-  .timeline-entry::before {
-    left: 60px;
-    border: medium solid var(--bg-tertiary);
-    border-width: 10px 10px 10px 0;
-    border-color: transparent var(--bg-tertiary) transparent transparent;
-  }
-
-  .timeline-entry.left::after,
-  .timeline-entry.right::after {
-    left: 15px;
-  }
-
-  .timeline-entry.right {
-    left: 0%;
-  }
-}
 
 

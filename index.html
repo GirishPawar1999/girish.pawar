@@ -11,16 +11,7 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="script.js" defer></script>
-    <script>
-            fetch("https://script.google.com/macros/s/AKfycbwrx_kWwmOkq45ctGSNKriYm5B2rt5CJ5uOyTXf9SYagiYll6KXUbK3SgNwl81wIenm/exec")
-                .then(response => response.json())
-                .then(data => {
-                    document.getElementById("visit-count").innerText = data.count;
-                })
-                .catch(() => {
-                    document.getElementById("visit-count").innerText = "Unavailable";
-                });
-    </script>
+
 </head>
 
 <body>
@@ -91,6 +82,16 @@
                 </button>
                 GIRISH PAWAR
             </div>
+                <script>
+                    fetch("https://script.google.com/macros/s/AKfycbwrx_kWwmOkq45ctGSNKriYm5B2rt5CJ5uOyTXf9SYagiYll6KXUbK3SgNwl81wIenm/exec")
+                        .then(response => response.json())
+                        .then(data => {
+                            document.getElementById("visit-count").innerText = data.count;
+                        })
+                        .catch(() => {
+                            document.getElementById("visit-count").innerText = "Unavailable";
+                        });
+                </script>
             <div class="header-controls">
                 <div style="text-align: center;">
                     <a class="Visitor" download target="_blank">Total Visits: <span id="visit-count">Loading...</span></a>
