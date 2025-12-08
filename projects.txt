@@ -1,0 +1,4 @@
+GM-AI-L – AI Mail Assistant | A smart, privacy-first, AI-powered local Gmail-style application with summarization, tone detection, smart replies, and real-time inbox automation. | Node.js, Electron JS, JSON DB, EJS, JavaScript, CSS, DistilBART, Flan-T5 | https://lnkd.in/d9SpaH8y
+Production Genie | Productivity analysis tool | NodeJS, HTML, CSS, JS | https://github.com/GirishPawar1999/project1
+Queue Management System | Smart queue flow optimization | NodeJS, MongoDB, JS | https://github.com/GirishPawar1999/project2
+Bag Counter | Jetson Orin + MobileNet SSD bag counting | Python, Jetson Orin, YOLO | https://github.com/GirishPawar1999/project3

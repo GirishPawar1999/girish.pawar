@@ -360,3 +360,50 @@ document.addEventListener("click", (event) => {
     sidebar.classList.remove("open");
   }
 });
+
+// ------------------ LOAD PROJECTS FROM TXT FILE ------------------
+async function loadProjects() {
+    const container = document.getElementById("projects-container");
+    if (!container) return; // Only run on pages that have project container
+
+    try {
+        const response = await fetch("projects.txt");
+        const text = await response.text();
+
+        const lines = text.split("\n").filter(line => line.trim() !== "");
+
+        container.innerHTML = ""; // Clear "loading..."
+
+        lines.forEach(line => {
+            const [title, description, tags, link] = line.split("|").map(x => x.trim());
+
+            const card = document.createElement("div");
+            card.className = "tech-card project-card";
+
+            card.innerHTML = `
+                <h4>📌 ${title}</h4>
+                <p>${description}</p>
+
+                <div class="project-tags">
+                    ${tags.split(",").map(tag => `<span class="tag">${tag.trim()}</span>`).join("")}
+                </div>
+
+                <div class="project-link-row">
+                    <a href="${link}" target="_blank" class="project-link">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg">
+                    </a>
+                </div>
+            `;
+
+            container.appendChild(card);
+        });
+
+    } catch (error) {
+        container.innerHTML = "<p>Failed to load projects.</p>";
+        console.error("Error loading projects:", error);
+    }
+}
+
+// Call on page load
+document.addEventListener("DOMContentLoaded", loadProjects);
+
