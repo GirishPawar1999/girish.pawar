@@ -25,12 +25,10 @@
         </div>
 
         <div class="sidebar-section">
-            <div class="sidebar-item active">
-                <a href="index.html" class="sidebar-item">
-                    <span class="material-symbols-rounded">search</span>
-                        Home
-                </a>
-            </div>
+            <a href="index.html" class="sidebar-item active">
+                <span class="material-symbols-rounded">search</span>
+                Home
+            </a>
         </div>
         <div class="sidebar-section">
             <div class="sidebar-item">
@@ -40,7 +38,7 @@
         </div>
 
         <div class="sidebar-section">
-            <a href="#projects" class="sidebar-item">
+            <a href="projects.html" class="sidebar-item">
                 <span class="material-symbols-rounded">apps</span>
                 Projects
             </a>
@@ -82,16 +80,6 @@
                 </button>
                 GIRISH PAWAR
             </div>
-                <script>
-                    fetch("https://script.google.com/macros/s/AKfycbwrx_kWwmOkq45ctGSNKriYm5B2rt5CJ5uOyTXf9SYagiYll6KXUbK3SgNwl81wIenm/exec")
-                        .then(response => response.json())
-                        .then(data => {
-                            document.getElementById("visit-count").innerText = data.count;
-                        })
-                        .catch(() => {
-                            document.getElementById("visit-count").innerText = "Unavailable";
-                        });
-                </script>
             <div class="header-controls">
                 <div style="text-align: center;">
                     <a class="Visitor" download target="_blank">Total Visits: <span id="visit-count">Loading...</span></a>

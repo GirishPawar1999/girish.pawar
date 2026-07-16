@@ -1162,6 +1162,101 @@ body.light-mode .alt-section-light {
   vertical-align: middle;
 }
 
+/* Resume download button rendered inline inside chat messages */
+.chat-download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+  padding: 10px 18px;
+  background-color: #007bff;
+  color: #fff !important;
+  border-radius: 24px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.chat-download-btn:hover {
+  background-color: #0056b3;
+  box-shadow: 0 6px 14px rgba(0, 86, 179, 0.5);
+  transform: translateY(-1px);
+}
+
+.chat-download-btn .material-symbols-rounded {
+  font-size: 18px;
+}
+
+.message-text a {
+  color: #4da3ff;
+  text-decoration: underline;
+}
+
+body.light-mode .message-text a {
+  color: #0056b3;
+}
+
+/* Projects page hero */
+.projects-hero {
+  text-align: center;
+  padding: 40px 24px 8px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.projects-hero h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.projects-hero p {
+  color: var(--text-secondary);
+  max-width: 640px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.projects-hero .chat-download-btn {
+  margin-top: 20px;
+}
+
+/* Featured (deep-dive) project blocks on the projects page */
+.featured-project {
+  background: var(--bg-tertiary);
+  border-radius: 16px;
+  padding: 28px 32px;
+  margin-bottom: 24px;
+}
+
+.featured-project h3 {
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.featured-project .featured-role {
+  color: var(--text-secondary);
+  font-size: 13px;
+  margin-bottom: 14px;
+  display: block;
+}
+
+.featured-project ul {
+  margin: 12px 0 0 18px;
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 14px;
+  margin-top: -12px;
+  margin-bottom: 24px;
+}
+
 
 
 

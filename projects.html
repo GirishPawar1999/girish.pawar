@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Projects — Girish Pawar</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts Link For Icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <button class="new-chat-btn" id="new-chat-btn">
+                <span class="material-symbols-rounded">add</span>
+                New chat
+            </button>
+        </div>
+
+        <div class="sidebar-section">
+            <a href="index.html" class="sidebar-item">
+                <span class="material-symbols-rounded">search</span>
+                Home
+            </a>
+        </div>
+        <div class="sidebar-section">
+            <div class="sidebar-item">
+                <span class="material-symbols-rounded">folder</span>
+                Library
+            </div>
+        </div>
+
+        <div class="sidebar-section">
+            <a href="projects.html" class="sidebar-item active">
+                <span class="material-symbols-rounded">apps</span>
+                Projects
+            </a>
+        </div>
+
+        <div class="sidebar-section">
+            <a href="aboutme.html" class="sidebar-item">
+                <span class="material-symbols-rounded">smart_toy</span>
+                About Me
+            </a>
+        </div>
+
+        <div class="sidebar-section">
+            <a href="contact.html" class="sidebar-item">
+                <span class="material-symbols-rounded">upgrade</span>
+                Contact Me
+            </a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-item">
+                <p>
+                    <center>
+                        © 2025 Girish Kashinath Pawar. All rights reserved.
+                    </center>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="chat-main">
+        <div class="chat-header">
+            <div class="chat-title">
+                <button id="sidebar-toggle" class="menu-toggle-btn">
+                    <span class="material-symbols-rounded">menu</span>
+                </button>
+                GIRISH PAWAR
+            </div>
+            <div class="header-controls">
+                <div style="text-align: center;">
+                    <a class="Visitor" download target="_blank">Total Visits: <span id="visit-count">Loading...</span></a>
+                </div>
+                <button class="header-btn" id="theme-toggle">
+                    <span class="material-symbols-rounded">light_mode</span>
+                </button>
+                <button class="header-btn" id="clear-chat">
+                    <span class="material-symbols-rounded">delete</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="chat-container">
+            <div class="about-section">
+
+                <!-- Hero -->
+                <div class="projects-hero">
+                    <h1>Projects</h1>
+                    <p>A closer look at what I've built — from a multi-agent RAG platform to production computer-vision
+                        pipelines running on edge hardware. Every project below shipped to real users or clients.</p>
+                    <a href="asset/resume.pdf" download class="chat-download-btn">
+                        <span class="material-symbols-rounded">download</span> Download Resume (PDF)
+                    </a>
+                </div>
+
+                <!-- Featured deep-dives -->
+                <div class="content-section alt-section-light">
+                    <h2 style="text-align: center; font-weight: bold;">Featured Work</h2>
+                    <p class="section-subtitle">The projects I'm most proud of, in more detail.</p>
+
+                    <div class="featured-project">
+                        <h3>🧩 NEXUS Multi-Agent RAG Platform</h3>
+                        <span class="featured-role">Development Lead · Oconnor Services, Adelaide (Capstone) · Feb 2026 – Jul 2026</span>
+                        <p>Led a 5-person Agile team building a 4-agent RAG platform (document indexing,
+                            retrieval/analysis, technician query, audit logging) for an enterprise HVAC/mechanical-engineering
+                            client, targeting a 40% cut in document search time and a 30% gain in tendering efficiency.</p>
+                        <ul>
+                            <li>Engineered a 6-stage RAG pipeline using Docling to parse layout-heavy PDFs and chunk/embed
+                                unstructured data for semantic search — lifting retrieval accuracy to 95% and cutting manual
+                                verification workload 78%.</li>
+                            <li>Hit 4.2s average query response (target ≤ 5s) and 83–89% retrieval/anomaly-detection accuracy
+                                in formal performance testing.</li>
+                            <li>Containerized the full stack and deployed to AWS EC2 behind an NGINX reverse proxy via
+                                GitHub Actions CI/CD.</li>
+                            <li>Passed 8/8 Essential Eight Level 2 security controls (MFA, RBAC, application control, audit
+                                logging) with zero critical findings across Dev/Test/Production.</li>
+                        </ul>
+                        <div class="project-tags">
+                            <span class="tag">Node.js</span><span class="tag">Python</span><span class="tag">React</span>
+                            <span class="tag">PostgreSQL</span><span class="tag">Docker/Kubernetes</span>
+                            <span class="tag">Kafka</span><span class="tag">AWS EC2</span><span class="tag">GitHub Actions</span>
+                        </div>
+                    </div>
+
+                    <div class="featured-project">
+                        <h3>📧 GM-AI-L Manager — AI Email Client</h3>
+                        <span class="featured-role">Personal Project · Aug 2025 – Nov 2025</span>
+                        <p>A cross-platform Electron desktop app (Windows/macOS/Linux) integrating the Gmail API to manage
+                            50+ emails per session with full-text search and pagination, running entirely offline for data
+                            privacy.</p>
+                        <ul>
+                            <li>Shipped 12 local AI features including bulk summarization (distilbart-cnn-12-6) and smart
+                                replies (flan-t5-base) with zero cloud dependency.</li>
+                            <li>Benchmarked with ROUGE/BLEU to confirm 90%+ semantic accuracy versus cloud equivalents.</li>
+                            <li>Cut inference latency 65% via local caching and token-length management — under 1.5 seconds
+                                per email for local text generation.</li>
+                        </ul>
+                        <div class="project-tags">
+                            <span class="tag">Electron</span><span class="tag">Node.js/Express</span>
+                            <span class="tag">Gmail API (OAuth 2.0)</span><span class="tag">HuggingFace Transformers</span>
+                        </div>
+                        <div class="project-link-row">
+                            <a href="https://github.com/GirishPawar1999/GM-AI-L-manager" target="_blank" rel="noopener" class="project-link">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="Repository link">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="featured-project">
+                        <h3>🏭 Production Genie</h3>
+                        <span class="featured-role">Software Engineer · KVAR Technologies Pvt. Ltd. · Jun 2021 – Jan 2025</span>
+                        <p>A multi-tenant (company/plant/supervisor/operator) manufacturing analytics platform on PostgreSQL,
+                            integrated with Tableau, Power BI, and Qlik Sense, plus an LLM-based report generator (Gemini API)
+                            with a custom tool/MCP plugin engine.</p>
+                        <ul>
+                            <li>Lifted operational transparency 70% and cut production downtime 30% across 23 plants.</li>
+                        </ul>
+                        <div class="project-tags">
+                            <span class="tag">Node.js</span><span class="tag">PostgreSQL</span><span class="tag">Power BI</span>
+                            <span class="tag">Tableau</span><span class="tag">Qlik Sense</span><span class="tag">Gemini API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick overview grid, pulled live from projects.txt -->
+                <div class="content-section alt-section-light">
+                    <h2 style="text-align: center; font-weight: bold;">All Projects</h2>
+                    <p class="section-subtitle">A quick-glance overview — including the shipped computer-vision and
+                        infrastructure work above.</p>
+                    <div class="tech-skills-container" id="projects-container">
+                        <p>Loading projects...</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="input-container">
+            <div class="input-wrapper">
+                <textarea id="chat-input" class="input-box" placeholder="Ask anything" rows="1" required></textarea>
+
+                <input type="file" id="file-input" accept="image/*,.pdf" style="display:none" />
+
+                <button type="button" id="upload-btn" class="control-btn" title="Upload Image or PDF">
+                    <span class="material-symbols-rounded">attach_file</span>
+                </button>
+
+                <button class="send-btn" id="send-btn">
+                    <span class="material-symbols-rounded">send</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

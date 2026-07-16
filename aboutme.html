@@ -17,18 +17,6 @@
 
     <script src="script.js" defer></script>
 
-
-    <script>
-        fetch("https://script.google.com/macros/s/AKfycbwrx_kWwmOkq45ctGSNKriYm5B2rt5CJ5uOyTXf9SYagiYll6KXUbK3SgNwl81wIenm/exec")
-            .then(response => response.json())
-            .then(data => {
-                document.getElementById("visit-count").innerText = data.count;
-            })
-            .catch(() => {
-                document.getElementById("visit-count").innerText = "Unavailable";
-            });
-    </script>
-    
 </head>
 
 <body>
@@ -42,12 +30,10 @@
         </div>
 
         <div class="sidebar-section">
-            <div class="sidebar-item">
-                <a href="index.html" class="sidebar-item">
-                    <span class="material-symbols-rounded">search</span>
-                        Home
-                </a>
-            </div>
+            <a href="index.html" class="sidebar-item">
+                <span class="material-symbols-rounded">search</span>
+                Home
+            </a>
         </div>
         <div class="sidebar-section">
             <div class="sidebar-item">
@@ -57,18 +43,18 @@
         </div>
 
         <div class="sidebar-section">
-            <div class="sidebar-item">
+            <a href="projects.html" class="sidebar-item">
                 <span class="material-symbols-rounded">apps</span>
                 Projects
-            </div>
+            </a>
         </div>
 
 
         <div class="sidebar-section">
-            <div class="sidebar-item active">
+            <a href="aboutme.html" class="sidebar-item active">
                 <span class="material-symbols-rounded">smart_toy</span>
                 About Me
-            </div>
+            </a>
         </div>
         <div class="sidebar-section">
             
@@ -130,7 +116,7 @@
                             <a href="https://www.linkedin.com/in/girish-pawar-1026a9129/" target="_blank" title="LinkedIn" class="social-icon">
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" />
                             </a>
-                            <a href="https://leetcode.com/your-leetcode" target="_blank" title="LeetCode" class="social-icon">
+                            <a href="https://leetcode.com/" target="_blank" title="LeetCode" class="social-icon">
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" />
                             </a>
                             <a href="mailto:girishpawar.connect@gmail.com" title="Email" class="social-icon">
@@ -241,7 +227,7 @@
                 
                     <!-- View All Projects Button -->
                     <div style="text-align: center; margin-top: 30px;">
-                        <a href="" class="view-all-button" target="_blank">View All Projects +</a>
+                        <a href="projects.html" class="view-all-button">View All Projects +</a>
                     </div>
                 </div>
                 
@@ -249,47 +235,28 @@
                 <div class="content-section alt-section-light">
                     <h2 style="text-align: center; font-weight: bold;">Certifications</h2>
                     <div class="tech-skills-container">
-                
+
                         <div class="tech-card project-card">
-                            <h4>🎓 Introduction to Python - Microsoft</h4>
-                            <p>Learned Python basics like variables, loops, and conditions.</p>
+                            <h4>☁️ AWS Cloud Practitioner Essentials</h4>
+                            <p>Udemy, 2026 — currently pursuing the official AWS Certified Cloud Practitioner exam.</p>
                             <br>
                             <div class="project-link-row">
-                                <a href="https://www.credly.com/badges/8511abe8-634b-4288-8fcd-c9ee13445513/linked_in" class="cred-link" target="_blank">Show Credential</a>
+                                <a href="https://www.udemy.com/certificate/UC-fa152561-2a4b-4eb1-a09a-69a047ef8536/" class="cred-link" target="_blank" rel="noopener">Show Credential</a>
                             </div>
                         </div>
-                
+
                         <div class="tech-card project-card">
-                            <h4>🎓 Stanford - Supervised ML</h4>
-                            <p>Covered regression, classification, and ML model evaluation.</p>
+                            <h4>🎓 Google Cloud Developer</h4>
+                            <p>GCP Professional Certification, covering core Google Cloud development skills.</p>
                             <br>
                             <div class="project-link-row">
-                                <a href="" class="cred-link" target="_blank">Show Credential</a>
-                            </div>
-                        </div>
-                
-                        <div class="tech-card project-card">
-                            <h4>🎓 Python Data Structures</h4>
-                            <p>Explored lists, dictionaries, files, and web scraping.</p>
-                            <br>
-                            <div class="project-link-row">
-                                <a href="https://coursera.org/share/5b9175010b3c278808dacadb0b87c778" class="cred-link" target="_blank">Show Credential</a>
-                            </div>
-                        </div>
-                
-                        <div class="tech-card project-card">
-                            <h4>📊 Python for Data Science</h4>
-                            <p>Used Python, Pandas, and Tableau for data analysis.</p>
-                            <br>
-                            <div class="project-link-row">
-                                <a href="https://www.udemy.com/certificate/UC-fa152561-2a4b-4eb1-a09a-69a047ef8536/" class="cred-link" target="_blank">Show
-                                    Credential</a>
+                                <a href="https://www.linkedin.com/in/girish-pawar-1026a9129/details/certifications/" class="cred-link" target="_blank" rel="noopener">Show Credential</a>
                             </div>
                         </div>
 
                     </div>
                                             <div style="text-align: center; margin-top: 30px;">
-                                                <a href="" class="view-all-button" target="_blank">View All Certifications +</a>
+                                                <a href="https://www.linkedin.com/in/girish-pawar-1026a9129/details/certifications/" class="view-all-button" target="_blank" rel="noopener">View All Certifications +</a>
                                             </div>
                 </div>
 
@@ -312,7 +279,7 @@
                     <span class="material-symbols-rounded">attach_file</span>
                 </button>
 
-                <button class="send-btn" id="send-btn" disabled>
+                <button class="send-btn" id="send-btn">
                     <span class="material-symbols-rounded">send</span>
                 </button>
 

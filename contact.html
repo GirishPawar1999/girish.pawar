@@ -23,16 +23,6 @@
         })();
     </script>
     <script src="script.js" defer></script>
-    <script>
-            fetch("https://script.google.com/macros/s/AKfycbwrx_kWwmOkq45ctGSNKriYm5B2rt5CJ5uOyTXf9SYagiYll6KXUbK3SgNwl81wIenm/exec")
-                .then(response => response.json())
-                .then(data => {
-                    document.getElementById("visit-count").innerText = data.count;
-                })
-                .catch(() => {
-                    document.getElementById("visit-count").innerText = "Unavailable";
-                });
-    </script>
 </head>
 
 <body>
@@ -46,12 +36,10 @@
         </div>
 
         <div class="sidebar-section">
-            <div class="sidebar-item">
-                <a href="index.html" class="sidebar-item">
-                    <span class="material-symbols-rounded">search</span>
-                    Home
-                </a>
-            </div>
+            <a href="index.html" class="sidebar-item">
+                <span class="material-symbols-rounded">search</span>
+                Home
+            </a>
         </div>
         <div class="sidebar-section">
             <div class="sidebar-item">
@@ -61,10 +49,10 @@
         </div>
 
         <div class="sidebar-section">
-            <div class="sidebar-item">
+            <a href="projects.html" class="sidebar-item">
                 <span class="material-symbols-rounded">apps</span>
                 Projects
-            </div>
+            </a>
         </div>
 
 
@@ -77,12 +65,10 @@
             
         </div>
         <div class="sidebar-section">
-            <div class="sidebar-item active">
-            <a href="contact.html" class="sidebar-item">
+            <a href="contact.html" class="sidebar-item active">
                 <span class="material-symbols-rounded">upgrade</span>
                 Contact Me
             </a>
-            </div>
         </div>
         <div class="sidebar-section">
             <div class="sidebar-item">
@@ -182,7 +168,7 @@
                     <span class="material-symbols-rounded">attach_file</span>
                 </button>
     
-                <button class="send-btn" id="send-btn" disabled>
+                <button class="send-btn" id="send-btn">
                     <span class="material-symbols-rounded">send</span>
                 </button>
     
